@@ -6,7 +6,7 @@
     "author": "ihuke",
     "license": "MIT",
     "homepage": "https://github.com/ihuke/vuex-module-decorator#readme",
-    "main": "dist/index.ts",
+    "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
         "dist"
@@ -22,7 +22,8 @@
     "scripts": {
         "dev": "vue-cli-service serve",
         "test:unit": "vue-cli-service test:unit",
-        "build": "vue-cli-service build --target lib --name vuex-module-decorator ./module/index.ts"
+        "build:vue": "vue-cli-service build --target lib --name vuex-module-decorator ./module/index.ts",
+        "build":"tsc -p tsconfig.module.json"
     },
     "repository": {
         "type": "git",
