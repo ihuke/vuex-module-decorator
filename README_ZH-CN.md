@@ -2,17 +2,17 @@
 
 Programming vuex module as viewmodle/redux.
 
-## Description
+## 描述
 
-When programming vuex,we must manual invoke it by mapState、mapGetters、mapMutations、mapActions...,How tedious it's!Now vuex-module-decorator will automatic mapping store's module (state、getter、mutation、action) to vue,it's like programming viewmodel/redux。
+标准的 vuex 开发流程中，调用 store 时需手动添加 mapState、mapGetters、mapMutations、mapActions，显得非常繁琐。vuex-module-decorator 组件的目的是将 store 中的 State、Getter 等自动映射到 vue 组件中，实现类似 viewmodle/redux 的开发体验。
 
-## Dependencies
+## 依赖
 
 - [Vue](https://github.com/vuejs/vue)
 - [Vuex](https://github.com/vuejs/vuex)
 - [vue-class-component](https://github.com/vuejs/vue-class-component)
 
-## Installation
+## 安装
 
 ```bash
 $ npm install --save vuex-module-decorator
@@ -20,9 +20,10 @@ $ npm install --save vuex-module-decorator
 $ yarn add vuex-module-decorator
 ```
 
-## Example
+## 示例
 
-1.programming store's module
+1.编写 store
+(建议采用 module 模式)
 
 ```ts
 export default {
@@ -48,10 +49,10 @@ export default {
 };
 ```
 
-2.import module
+2.在 Vue 中引用 store 定义，并使用 namespace 参数声明 module 名称
 
-- if namespace is nudefined，module's name will be component's name，like example: Board->board
-- if namespace is ""，it's meaning mapping store's root module。
+- namespace 参数未定义时，module 名称缺省使用以小写开头的 Component 名，本例即为 Board->board
+- namespace 值为""时，表示为 store 中的 root 节点。
 
 ```ts
 import Module from "../../module";
