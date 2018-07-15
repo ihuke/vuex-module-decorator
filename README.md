@@ -50,7 +50,7 @@ export default {
 
 2.import module
 
-- if namespace is nudefined，component's name（lowercase the first letters）will be module's name，like example: Board->board
+- if namespace is nudefined，component's name(lowercase the first letters) will be as namespace，like example: Board->board
 - if namespace is ""，it's meaning mapping store's root module。
 
 ```ts
