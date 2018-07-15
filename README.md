@@ -4,7 +4,7 @@ Programming vuex module as viewmodle/redux.
 
 ## Description
 
-When programming vuex,we must manual invoke it by mapState、mapGetters、mapMutations、mapActions...,How tedious it's!Now vuex-module-decorator will automatic mapping store's module (state、getter、mutation、action) to vue,it's like programming viewmodel/redux。
+When programming vuex,we must manual invoke it by mapState、mapGetters、mapMutations、mapActions...,How tedious it's! Now vuex-module-decorator will automatic mapping store's module (state、getter、mutation、action) to vue,it's like programming viewmodel/redux。
 
 ## Dependencies
 
@@ -50,7 +50,7 @@ export default {
 
 2.import module
 
-- if namespace is nudefined，module's name will be component's name，like example: Board->board
+- if namespace is nudefined，component's name（lowercase the first letters）will be module's name，like example: Board->board
 - if namespace is ""，it's meaning mapping store's root module。
 
 ```ts
